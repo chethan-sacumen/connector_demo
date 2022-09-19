@@ -93,34 +93,34 @@ def test_alert_notification_filter():
     assert isinstance(res, list)
 
 
-# def test_filter_notifications():
-#     notifications = [
-#         {
-#             "alert_action": "ANA_ALERT_CREATED",
-#             "alert": {
-#                 "id": "12345000-0000-0000-0000-00000000123",
-#                 "category": "OTHER",
-#                 "sub_category": "OBSERVED_BAD_ACTIVITY",
-#                 "severity": 600,
-#                 "status": "STATUS-1",
-#             },
-#         },
-#         {
-#             "alert_action": "ANA_ALERT_CREATED",
-#             "alert": {
-#                 "id": "12545000-0000-0000-0000-000000000000",
-#                 "category": "OTHER",
-#                 "sub_category": "OBSERVED_BAD_ACTIVITY",
-#                 "severity": 600,
-#                 "status": "STATUS-1",
-#             },
-#         },
-#     ]
-#     notification_type = "alert_notifications"
+def test_filter_notifications():
+    notifications = [
+        {
+            "alert_action": "ANA_ALERT_CREATED",
+            "alert": {
+                "id": "12345000-0000-0000-0000-00000000123",
+                "category": "OTHER",
+                "sub_category": "OBSERVED_BAD_ACTIVITY",
+                "severity": 600,
+                "status": "STATUS-1",
+            },
+        },
+        {
+            "alert_action": "ANA_ALERT_CREATED",
+            "alert": {
+                "id": "12545000-0000-0000-0000-000000000000",
+                "category": "OTHER",
+                "sub_category": "OBSERVED_BAD_ACTIVITY",
+                "severity": 600,
+                "status": "STATUS-1",
+            },
+        },
+    ]
+    notification_type = "alert_notifications"
 
-#     res = nf.filter_notfications(notifications, notification_type, configs)
+    res = nf.filter_notfications(notifications, notification_type, configs)
 
-#     assert isinstance(res, list)
+    assert isinstance(res, list)
 
 
 def test_filtered_out_notifications():
