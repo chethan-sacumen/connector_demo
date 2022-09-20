@@ -26,7 +26,7 @@ def test_dome_notification_filter():
     res = nf.dome_notification_filter(notifications, configs)
     assert isinstance(res, list)
 
-
+#test_event_notification_filter
 def test_event_notification_filter():
     notifications = [
         {
